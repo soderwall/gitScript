@@ -105,11 +105,10 @@ git tag -d v$input
 git checkout develop
     echo "      The script is aborting execution..."
     exit 1
-fi
-echo "      Done ..."
 echo "      8.  Push new tags + master and develop to upstream." 
 echo "      Tags needs to be pushed before or at the same time as master&develop"
 echo "      this is important for jenkins to build properly."
 echo "      git push --tags upstream master develop"
-#    git push --tags upstream master develop
+git push --tags upstream master develop
+echo "      Done ..."
 
